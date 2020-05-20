@@ -1,0 +1,81 @@
+ docker build -t 5850795/ubuntu:v2 .
+   18  docker images
+   19  clear
+   20  docker images
+   21  docker run -it 5850795/ubuntu:v2
+   22  docker run -it 5850795/ubuntu:v2
+   23  nano Dockerfile
+   24  clear
+   25  docker build -t 5850795/ubuntu:v3 .
+   26  clear
+   27  docker run -it 5850795/ubuntu:v4 bash
+   28  docker run -it 5850795/ubuntu:v3 bash
+   29  docker run -it 5850795/ubuntu:v3
+   30  docker run -it 5850795/ubuntu:v3 bash
+   31  docker rm $ (docker ps -aq)
+   32  docker rm $(docker ps -aq)
+   33  docker ps -aq
+   34  clear
+   35  nano Dockerfile
+   36  docker build -t 5850795/ubuntu:v4 .
+   37  clear
+   38  docker images
+   39  docker run --rm -it 5850795/ubuntu:v4 sleep 500
+   40  clear
+   41  nano Dockerfile
+   42  docker build -t 5850795/ubuntu:v5 .
+   43  clear
+   44  docker images
+   45  docker run --rm -dit --name web1 -p 9000:80 5850795/ubuntu:v5 bash
+   46  docker ps
+   47  docker exec -it web1 service nginx start
+   48  docker run --rm -dit --name app1  5850795/ubuntu:v5 bash
+   49  clear
+   50  docker ps
+   51  docker exec -it app1 service nginx start
+   52  docker inspect app1
+   53  docker exec curl 172.17.0.3
+   54  docker exec -it web1 curl 172.17.0.3
+   55  clear
+   56  cat Dockerfile
+64  cls
+   65  clear
+   66  docker run -it 5850795/ubuntu:v
+   67  clear
+   68  docker run -it 5850795/ubuntu:v6 ping www.facebook.com
+   69  clear
+   70  nano  Dockerfile
+   71  docker build -t 5850795/ubuntu:v7 .
+   72  clear
+   73  docker run -it 5850795/ubuntu:v7
+   74  docker run -it 5850795/ubuntu:v7 ping www.facebook.com
+   75  clear
+   76  nano Dockerfile
+   77  docker build -t 5850795/ubuntu:v8 .
+   78  clear
+   79  docker run -it 5850795/ubuntu:v8
+   80  cat Dockerfile
+   81  nano Dockerfile
+   82  docker build -t 5850795/ubuntu:v9 .
+   83  docker run -it 5850795/ubuntu:v9 bash
+   84  clear
+   85  usermod -aG docker ubuntu
+   86  systemctl restart docker
+   87  exit
+   88  watch-n 1 docker ps
+   89  watch -n 1 docker ps
+   90  pwd
+   91  echo "My Bank Password" >> Password
+   92  ll
+   93  clear
+   95  cat /root/password
+   96  cat /root/Password
+   97  exit
+   98  nano Dockerfile
+   99  docker build -t 5850795/ubuntu:v10 .
+  100  docker run --rm -it 5850795/ubuntu:v10 bash
+  101  docker run --rm -it -v /:/mydate  5850795/ubuntu:v10 bash
+  102  docker exec -it boring_pike bash
+  103  docker ps
+  104  ll
+  105  docker ps
